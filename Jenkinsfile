@@ -7,8 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Clean and build the project
-                    sh './mvnw package'
+                    // Clean and build the project using Windows command
+                    bat '.\\mvnw.cmd package'
                 }
             }
         }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     // Generate Jacoco code coverage report
-                    sh './mvnw jacoco:report'
+                    bat '.\\mvnw.cmd jacoco:report'
                 }
             }
         }
