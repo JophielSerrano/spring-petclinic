@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     // Clean and build the project
-                    sh './mvnw clean install'
+                    sh './mvnw package'
                 }
             }
         }
